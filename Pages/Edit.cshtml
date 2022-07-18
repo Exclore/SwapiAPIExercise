@@ -1,0 +1,110 @@
+﻿@page
+@model StarWarsAPIExercise.Pages.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Starship</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Starship.Id" />
+            <div class="form-group">
+                <label asp-for="Starship.Name" class="control-label"></label>
+                <input asp-for="Starship.Name" class="form-control" />
+                <span asp-validation-for="Starship.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Starship.Model" class="control-label"></label>
+                <input asp-for="Starship.Model" class="form-control" />
+                <span asp-validation-for="Starship.Model" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Starship.Starship_class" class="control-label"></label>
+                <input asp-for="Starship.Starship_class" class="form-control" />
+                <span asp-validation-for="Starship.Starship_class" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Starship.Manufacturer" class="control-label"></label>
+                <input asp-for="Starship.Manufacturer" class="form-control" />
+                <span asp-validation-for="Starship.Manufacturer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Starship.Cost_in_credits" class="control-label"></label>
+                <input asp-for="Starship.Cost_in_credits" class="form-control" />
+                <span asp-validation-for="Starship.Cost_in_credits" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Starship.Length" class="control-label"></label>
+                <input asp-for="Starship.Length" class="form-control" />
+                <span asp-validation-for="Starship.Length" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Starship.Crew" class="control-label"></label>
+                <input asp-for="Starship.Crew" class="form-control" />
+                <span asp-validation-for="Starship.Crew" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Starship.Passengers" class="control-label"></label>
+                <input asp-for="Starship.Passengers" class="form-control" />
+                <span asp-validation-for="Starship.Passengers" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Starship.Max_atmosphering_speed" class="control-label"></label>
+                <input asp-for="Starship.Max_atmosphering_speed" class="form-control" />
+                <span asp-validation-for="Starship.Max_atmosphering_speed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Starship.Hyperdrive_rating" class="control-label"></label>
+                <input asp-for="Starship.Hyperdrive_rating" class="form-control" />
+                <span asp-validation-for="Starship.Hyperdrive_rating" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Starship.MGLT" class="control-label"></label>
+                <input asp-for="Starship.MGLT" class="form-control" />
+                <span asp-validation-for="Starship.MGLT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Starship.Cargo_capacity" class="control-label"></label>
+                <input asp-for="Starship.Cargo_capacity" class="form-control" />
+                <span asp-validation-for="Starship.Cargo_capacity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Starship.Consumables" class="control-label"></label>
+                <input asp-for="Starship.Consumables" class="form-control" />
+                <span asp-validation-for="Starship.Consumables" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Starship.Url" class="control-label"></label>
+                <input asp-for="Starship.Url" class="form-control" />
+                <span asp-validation-for="Starship.Url" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Starship.Created" class="control-label"></label>
+                <input asp-for="Starship.Created" class="form-control" />
+                <span asp-validation-for="Starship.Created" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Starship.Edited" class="control-label"></label>
+                <input asp-for="Starship.Edited" class="form-control" />
+                <span asp-validation-for="Starship.Edited" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

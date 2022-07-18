@@ -1,0 +1,18 @@
+﻿@page
+@model StarWarsAPIExercise.Pages.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Watto's Ship Emporium</h1>
+
+<div class="card" style="width: 20rem;">
+  <img src="./millennium-falcon-small.jpg" class="card-img-top" alt="Millennium Falcon">
+  <div class="card-body">
+    <h5 class="card-title">Ship of the Day: @Html.DisplayFor(model => model.Starship[@Model.randomNum].Name)</h5>
+    <p class="card-text">Built By: @Html.DisplayFor(model => model.Starship[@Model.randomNum].Manufacturer)</p>
+    <p class="card-text">Cost: @Html.DisplayFor(model => model.Starship[@Model.randomNum].Cost_in_credits)</p>
+    <a class="btn btn-primary" asp-page="./Details" asp-route-id="@Model.Starship[@Model.randomNum].Id">View Details</a>
+  </div>
+</div>
